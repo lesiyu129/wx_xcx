@@ -18,7 +18,7 @@ App({
           wx.getUserInfo({
             success: function (res) {
               wx.request({
-                url: 'https://lesiyu129.vicp.io:44584/wx',
+                url: 'https://lesiyu129.vicp.io:47158/wx',
                 method: 'post',
                 data: {
                   code: wx.getStorageSync('code'),
