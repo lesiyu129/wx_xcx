@@ -49,7 +49,7 @@ var config = {
     if (data.over) {
       data.overMsg = '游戏结束';
       wx.request({
-        url: 'https://lesiyu129.vicp.io:47158/wx_sub',
+        url: 'https://www.lsy3d.com/wx_sub',
         method: "POST",
         data: {
           score: wx.getStorageSync('highscore'),
