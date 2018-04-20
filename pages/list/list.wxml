@@ -2,7 +2,7 @@
 <view bindtap='back'>
   返回
 </view>
-<view wx:for="{{listdata}}">
+<view wx:for="{{listdata}}" wx:key="id">
   <view class="flex-wrp" style="flex-direction:row;">
     <view  class="flex-item bc_green"><image src='{{item.user.avatarUrl}}' mode='aspectFit' class="flex-item bc_green"></image></view>
     <view class="flex-item bc_red">{{item.user.nickName}}</view>
