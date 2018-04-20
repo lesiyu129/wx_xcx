@@ -1,0 +1,12 @@
+<!--pages/排行榜/排行榜.wxml-->
+<view bindtap='back'>
+  返回
+</view>
+<view wx:for="{{listdata}}">
+  <view class="flex-wrp" style="flex-direction:row;">
+    <view  class="flex-item bc_green"><image src='{{item.user.avatarUrl}}' mode='aspectFit' class="flex-item bc_green"></image></view>
+    <view class="flex-item bc_red">{{item.user.nickName}}</view>
+    <view class="flex-item bc_blue">{{item.score}}</view>
+  </view>
+
+</view>

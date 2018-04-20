@@ -12,8 +12,9 @@
     </view>
 
     <view class="above-game">
-      <text class="game-intro">你能拿到2048吗？</text>
+      <text class="restart-button" bindtap="back">返回</text>
       <text class="restart-button" bindtap="restart">新游戏</text>
+      
     </view>
 
     <view class="game-container">
@@ -26,8 +27,8 @@
       </view>
 
       <view class="grid-container" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd">
-        <view wx:for="{{grids}}" wx:for-index="rowIdx" wx:for-item="row" class="grid-row">
-          <view wx:for="{{row}}" wx:for-index="colIdx" wx:for-item="cell" class="grid-cell">
+        <view wx:for="{{grids}}" wx:key="{{id}}" wx:for-index="rowIdx" wx:for-item="row" class="grid-row">
+          <view wx:for="{{row}}" wx:key="{{id}}" wx:for-index="colIdx" wx:for-item="cell" class="grid-cell">
             <view class="tile tile-{{cell.value}}">
               <view wx:if="{{cell}}" class="tile-inner">
                 {{cell.value}}

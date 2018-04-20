@@ -1,13 +1,13 @@
 <!--index.wxml-->
 <view class="container">
   	
-	<view wx:for-items="{{gameList}}" class="usermotto">
-	    <button type="primary" disabled="{{disabled}}" bindtap="start{{item}}"> {{item}} </button>
-	</view>
+	<view class="usermotto" style='position: relative'>
+      
+        <button type="primary" disabled="{{disabled}}" bindtap="start{{gameList[0]}}" style='height:45px;width:100px;position: relative;margin-bottom:10px'> 开始游戏 </button>
 
-  <view>
-    <button  type="primary" style="top:10px" bindtap="al">排行榜</button>
-  </view>
+        <button type="primary" disabled="{{disabled}}" bindtap="start{{gameList[1]}}" style='height:45px;width:100px;position: relative;margin-bottom:10px'> 排行榜 </button>
+
+	</view>
 
 	<text class="more">更多内容，敬请期待...</text>
 </view>

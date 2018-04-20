@@ -4,7 +4,7 @@ var app = getApp();
 var config = {
     data: {
         disable: false,
-        gameList: ['2048']
+        gameList: ['2048','list']
     },
 
     onLoad: function() {
@@ -32,6 +32,7 @@ var config = {
 };
 
 config.data.gameList.forEach(function(v) {
+  
     config['start' + v] = function() {
 
         config.data.disable = true;
@@ -42,7 +43,5 @@ config.data.gameList.forEach(function(v) {
         })
     }
 });
-
-
 
 Page(config);

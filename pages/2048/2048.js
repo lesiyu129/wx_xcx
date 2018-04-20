@@ -78,7 +78,10 @@ var config = {
       score: 0
     });
   },
-
+  //返回
+  back:()=>{
+    wx.navigateBack()
+  },
   touchStartClienX: 0,
   touchStartClientY: 0,
   touchEndClientX: 0,
